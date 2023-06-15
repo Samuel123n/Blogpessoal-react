@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App.tsx'
 import './index.css'
+import Home from 'pages/home.tsx'
 
 
 ReactDOM.render(
