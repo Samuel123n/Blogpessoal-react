@@ -2,9 +2,8 @@ import React from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link } from 'react-router-dom';
-import './Login.css';
-import '../Components/static/navbar/Navbar.css';
-import '../Components/static/footer/Footer.css';
+import './Login.css'
+
 
 function Login() {
 
