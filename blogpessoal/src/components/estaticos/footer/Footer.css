@@ -1,0 +1,35 @@
+.fundFooter{
+    background: rgb(7,30,76);
+    background: linear-gradient(90deg, rgba(7,30,76,1) 0%, rgba(166,77,107,1) 100%);
+    height: 6%;
+    color: white !important;
+    border-radius: 10% 10% 0% 0%;
+    height: 8vh;
+    min-width: 100%;
+    bottom:0;
+    left:0; 
+    width: 100%;   
+
+}
+
+
+
+.social{
+ font-size: 40px !important; 
+
+}
+
+.midia{    
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 7vh;
+}
+
+.textos{
+    font-family: Trebuchet MS;
+    color: rgb(0, 0, 0);
+    
+}
+
+
