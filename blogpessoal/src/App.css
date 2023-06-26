@@ -1,4 +1,5 @@
 body{
-  background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg?w=1380&t=st=1687553217~exp=1687553817~hmac=5d5870facaf54eb9536822262ac39a60d7aa555b72b6da6a623522f92d74a26f");
-  background-size: cover
+  background-image: url("https://img.freepik.com/fotos-gratis/parede-de-concreto-azul-marinho-com-arranhoes_53876-102666.jpg?w=900&t=st=1687779455~exp=1687780055~hmac=3c5d9dc387cdf3760cee0b8037b75ab2c51a7cd34bba1bb3b5d8872cd42cd592");
+  background-size: cover;
+  margin: auto;
 }
