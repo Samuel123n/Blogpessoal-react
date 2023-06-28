@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid, Button, Tooltip, Fab, makeStyles, createStyles, Theme } from '@material-ui/core';
 import { Box, } from '@mui/material';
 import './Home.css';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
 import AddIcon from '@material-ui/icons/Add';
-import useLocalStorage from 'react-use-localstorage';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/TokenReducer';
 import { Link, useNavigate } from 'react-router-dom';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -24,6 +25,19 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Home() {
     const classes = useStyles();
+    
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+
+  useEffect(() => {
+    if (token == "") {
+        alert("Você precisa estar logado")
+        navigate("/login")
+
+    }
+}, [token])
    
 
     return (
@@ -38,8 +52,10 @@ function Home() {
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
-                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
-                    </Box>
+                            <Link to="/posts" className="text-decorator-none">
+                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                            </Link>
+                         </Box>
                 </Grid>
                 <Grid item xs={6} >
                     <img src="https://img.freepik.com/vetores-gratis/blogar-divertido-criacao-de-conteudo-streaming-online-videoblog-jovem-fazendo-selfie-para-rede-social-compartilhando-feedback-estrategia-de-autopromocao-ilustracao-vetorial-de-metafora-de-conceito_335657-855.jpg?w=826&t=st=1687357166~exp=1687357766~hmac=9a10a800ba8da95bac15518414f2b345118f434a37e007325349fe28771747a1" alt="" width="500px" height="500px" />

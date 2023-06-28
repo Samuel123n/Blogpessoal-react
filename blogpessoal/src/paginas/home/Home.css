@@ -4,7 +4,7 @@
 }
 
 .titulo{
-   color:#2A6F97!important;
+   color:#32383b !important;
    font-weight: bold !important;
 }
 
@@ -15,4 +15,9 @@
 
 .postagens{
     background-color: white;
+}
+
+
+.text-decorator-none{
+    text-decoration: none;
 }
