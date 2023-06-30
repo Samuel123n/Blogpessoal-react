@@ -1,0 +1,30 @@
+body{
+    background: rgb(7,30,76);
+    background: linear-gradient(90deg, rgba(7,30,76,1) 0%, rgba(166,77,107,1) 100%);
+}
+
+
+
+.caixa{
+    background-color: transparent ;
+    color: white;
+}
+
+.titulo{
+   color:#32383b !important;
+   font-weight: bold !important;
+}
+
+.botao{
+    border-color: white !important;
+    color: white !important;
+}
+
+.postagens{
+    background-color: white;
+}
+
+
+.text-decorator-none{
+    text-decoration: none;
+}
