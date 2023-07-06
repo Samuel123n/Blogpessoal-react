@@ -5,9 +5,9 @@ import {Box} from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
 import {useNavigate } from 'react-router-dom'
-import { busca } from '../../../Services/service';
+import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokenReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 import Edit from '../../../assets/edit.gif'
 import Delete from '../../../assets/delete.gif'

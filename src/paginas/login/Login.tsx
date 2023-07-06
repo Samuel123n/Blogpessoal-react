@@ -3,8 +3,8 @@ import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addToken } from "../../store/tokens/Action";
-import { login } from '../../Services/service';
+import { addToken } from "../../store/tokens/actions";
+import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { toast } from 'react-toastify';
@@ -45,7 +45,7 @@ function Login() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                });
+            });
             navigate('/home')
         }
     }, [token])
@@ -66,31 +66,36 @@ function Login() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                });
-                
+            });
+
         }
     }
 
 
     return (
-        <div className="box">
-            <div className="form">
-                <h2>Login</h2>
-                <form onSubmit={onSubmit}>
-                    <div className="inputBox">
-                        <TextField type="text" className="inputBox" value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' name='usuario' />
-                        <i></i>
-                    </div>
-                    <div className="inputBox">
-                        <TextField type="password" className="inputBox" value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' name='senha' />
-                        <i></i>
-                    </div>
-                    <div className="links">
-                        <Link to='/cadastrousuario'>Cadastre-se</Link>
-                    </div>
-                    <input type="submit" value="Login" />
-                </form>
+        <div className='body'>
+        <Grid className='estrutura '>
+            <div className="box ">
+                <div className="form">
+                    <h2>Login</h2>
+                    <form onSubmit={onSubmit}>
+                        <div className="inputBox">
+                            <input type="text" className="inputBox" value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' placeholder='Usuário' name='usuario' />
+                            <i></i>
+                        </div>
+                        <div className="inputBox1">
+
+                            <input value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' placeholder='Senha' name='senha' type='password' />
+                            <i></i>
+                        </div>
+                        <div className="links">
+                            <Link to='/cadastrousuario'>Cadastre-se</Link>
+                        </div>
+                        <input type="submit" value="Login" />
+                    </form>
+                </div>
             </div>
+        </Grid>
         </div>
     );
 }

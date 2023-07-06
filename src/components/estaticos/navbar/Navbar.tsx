@@ -6,9 +6,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { Box, Grid, IconButton } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokenReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/tokens/Action';
+import { addToken } from '../../../store/tokens/actions';
 import { toast } from "react-toastify";
 
 const useStyles = makeStyles((theme) => ({

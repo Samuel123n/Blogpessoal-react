@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem';
-import { busca } from '../../../Services/service'
+import { busca } from '../../../services/Service'
 import { Card, CardActions, CardContent, Button, Typography, CardActionArea, CardMedia, Paper, Chip } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './ListaPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/TokenReducer';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import Edit from '../../../assets/edit.gif'
+import Delete from '../../../assets/delete.gif'
 import FaceIcon from '@material-ui/icons/Face';
 
 
