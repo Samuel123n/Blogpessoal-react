@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import './Footer.css'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokenReducer';
+import  GitHub  from '../../../assets/github.gif';
 
 function Footer() {
 
@@ -19,11 +20,11 @@ function Footer() {
             <Box className='fundFooter'>
                 <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                     <Box display="flex" alignItems="center" justifyContent="center" className="social" >
-                        <a href="https://github.com/Samuel123n" target="_blank">
-                            <img src="https://img.icons8.com/stickers/60/github.png" alt="github"/>
+                        <a href="https://github.com/MIKEMARQUEZINI" target="_blank">
+                            <img src={GitHub} alt="github"/>
                         </a>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2023 Copyright:</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >© 2023 Copyright: Reserved Mike Marquezini</Typography>
                         </Box>
 
 

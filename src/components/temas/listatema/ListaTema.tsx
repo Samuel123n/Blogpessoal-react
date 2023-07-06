@@ -9,6 +9,8 @@ import { busca } from '../../../Services/service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokenReducer';
 import { toast } from 'react-toastify';
+import Edit from '../../../assets/edit.gif'
+import Delete from '../../../assets/delete.gif'
 
 function ListaTema() {
   const [temas, setTemas] = useState<Tema[]>([])
@@ -51,8 +53,8 @@ function ListaTema() {
     <>
     {
       temas.map(tema =>(
-      <Box m={2} >
-        <Card variant="outlined">
+      <Box className='alinhar'>
+        <Card >
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Tema
@@ -66,16 +68,12 @@ function ListaTema() {
 
               <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                    atualizar
-                  </Button>
+                  <img src={Edit} width='40' height='40'alt="" />
                 </Box>
               </Link>
               <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' color="secondary">
-                    deletar
-                  </Button>
+                <img src={Delete} width='40' height='40'alt="" />
                 </Box>
               </Link>
             </Box>

@@ -11,11 +11,22 @@ import { useDispatch } from "react-redux";
 import { addToken } from '../../../store/tokens/Action';
 import { toast } from "react-toastify";
 
-
+const useStyles = makeStyles((theme) => ({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  }));
 
 
 
 function Navbar() {
+    const classes = useStyles();
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
@@ -41,7 +52,7 @@ function Navbar() {
     var navbarComponent;
 
     if (token != "") {
-        navbarComponent = <AppBar className="fundonavbar">
+        navbarComponent = <AppBar  position='static' className="fundonavbar">
             <Toolbar >
                 <Box >
                     <Link to="/home">
@@ -49,20 +60,20 @@ function Navbar() {
                     </Link>
 
                     <Link to="/posts">
-                        <img className="icons" src="https://img.icons8.com/stickers/44/speech-bubble.png" alt="postagens" />
+                        <img className="icons" src="https://img.icons8.com/stickers/44/speech-bubble.png" alt="Icone Postagens" />
                     </Link>
                     <Link to="/temas">
-                        <img className="icons" src="https://img.icons8.com/stickers/44/for-you.png" alt="Temas" />
+                    <img className="icons" src="https://img.icons8.com/stickers/44/news--v1.png" alt="Icone Temas"/>
                     </Link>
 
                     <Link to="/formularioTema" >
-                        <img className="icons" src="https://img.icons8.com/stickers/44/add-tab.png" alt="adicionar temas" />
+                        <img className="icons" src="https://img.icons8.com/stickers/44/add-tab.png" alt="Icone Adicionar temas" />
                     </Link>
 
                 </Box>
                 <Box >
                     <Link to="/login" onClick={goLogout}>
-                        <img className="icons" src="https://img.icons8.com/stickers/100/power-off-button.png" alt="power-off-button" />
+                        <img className="icons" style={{marginLeft:102}}src="https://img.icons8.com/stickers/100/power-off-button.png" alt="power-off-button" />
                     </Link>
                 </Box>
             </Toolbar>
@@ -70,6 +81,7 @@ function Navbar() {
     }
 
         return (
+
             <>
                 {navbarComponent}
             </>

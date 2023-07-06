@@ -1,3 +1,9 @@
 .titulo{
     font-weight: bold;
  }
+
+.fundotab{   
+    background: rgb(7,30,76);
+    background: linear-gradient(90deg, rgba(7,30,76,1) 0%, rgba(166,77,107,1) 100%);
+    color: white !important;
+} 

@@ -8,6 +8,7 @@ import { busca, buscaId, post, put } from '../../../Services/service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokenReducer';
 import { toast } from 'react-toastify';
+import Yeah from '../../../assets/yes.gif'
 
 function CadastroPost() {
     let navigate = useNavigate();
@@ -136,7 +137,7 @@ function CadastroPost() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criando uma publicação</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >New Posts</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="texto" name="texto" variant="outlined" margin="normal" fullWidth />
 
@@ -156,9 +157,10 @@ function CadastroPost() {
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
-                        Finalizar
+                    <FormHelperText>Defina um Tema</FormHelperText>
+                        
+                    <Button type="submit">
+                    <img width="48" height="48" src="https://img.icons8.com/color/48/checked-checkbox.png" alt="checked-checkbox"/>
                     </Button>
                 </FormControl>
             </form>

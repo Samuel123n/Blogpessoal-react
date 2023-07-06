@@ -7,6 +7,7 @@ import { buscaId, post, put } from '../../../Services/service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokenReducer';
 import { toast } from 'react-toastify';
+import Yeah from '../../../assets/yes.gif'
 
 
 function CadastroTema() {
@@ -111,10 +112,10 @@ function CadastroTema() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography className='form-tema' variant="h3" component="h1" align="center" >FORMULÁRIO DE CADASTRO TEMA</Typography>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" >New Theme</Typography>
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
-                    Finalizar
+                <Button type="submit" >
+                <img width="48" height="48" src="https://img.icons8.com/color/48/checked-checkbox.png" alt="checked-checkbox"/>
                 </Button>
             </form>
         </Container>

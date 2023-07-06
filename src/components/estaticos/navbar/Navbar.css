@@ -1,20 +1,43 @@
-
-.fundonavbar{
-    background: rgb(7,30,76);
-    background: linear-gradient(90deg, rgba(7,30,76,1) 0%, rgba(166,77,107,1) 100%);
-    border-radius: 0% 0% 10% 10%;  
-    display: flex !important;  
+.fundonavbar {
+    background: rgb(7, 30, 76);
+    background: linear-gradient(90deg, rgba(7, 30, 76, 1) 0%, rgba(166, 77, 107, 1) 100%);
+    border-radius: 0% 0% 10% 10%;
+    display: flex !important;
+    flex-wrap: wrap;
     align-items: center !important;
-    height: 6vh;
+    height: 5vh;
 }
-    
 
+/* Estilos para telas menores (máximo de 768px) */
+@media (max-width: 768px) {
+    .fundonavbar {
+        /* Exemplo de ajuste responsivo para telas menores */
+        height: 8vh; /* Aumenta a altura para melhorar a visualização em telas menores */
+    }
+}
 
-.icons{
+/* Estilos para telas ainda menores (máximo de 576px) */
+@media (max-width: 576px) {
+    .fundonavbar {
+        /* Exemplo de ajuste responsivo para telas ainda menores */
+        height: 10vh; /* Aumenta ainda mais a altura para melhorar a visualização em telas muito pequenas */
+    }
+}
+
+/* Estilos para ícones dentro da navbar */
+.icons {
     cursor: pointer;
     width: 37px;
     height: 37px;
-    padding: 7vh;
+    margin-left: 35px;
+}
 
-    
+/* Estilos para ícones em telas menores */
+@media (max-width: 576px) {
+    .icons {
+        /* Exemplo de ajuste responsivo para ícones em telas menores */
+        width: 30px; /* Reduz o tamanho dos ícones para caber em telas menores */
+        height: 30px;
+        margin-left: 20px; /* Reduz o espaço entre os ícones */
+    }
 }

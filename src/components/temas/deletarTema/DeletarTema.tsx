@@ -90,14 +90,13 @@ function DeletarTema() {
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
+              <Button onClick={sim} >
+              <img width="44" height="44" src="https://img.icons8.com/stickers/44/checkmark.png" alt="checkmark"/></Button>
               </Box>
               <Box mx={2}>
-                <Button  onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
+              <Button  onClick={nao} >
+              <img width="44" height="44" src="https://img.icons8.com/stickers/100/delete-sign.png" alt="delete-sign"/>
+              </Button>
               </Box>
             </Box>
           </CardActions>

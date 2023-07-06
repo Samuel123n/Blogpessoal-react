@@ -7,7 +7,6 @@ import CloseIcon from '@material-ui/icons/Close';
 import './ModalPostagem.css';
 import CadastroPost from '../cadastroPost/CadastroPost';
 
-
 function getModalStyle() {
   const top = 50 ;
   const left = 50;
@@ -59,10 +58,9 @@ function ModalPostagem () {
 
   return (
     <div>
-      <Button
-        variant="outlined"
-        className="btnModal"
-        onClick={handleOpen}>Nova Postagem</Button>
+      <Button        
+      className="btnModal"
+        onClick={handleOpen}> <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/plus-math.png" alt="plus-math"/></Button>
       <Modal
         open={open}
         onClose={handleClose}
